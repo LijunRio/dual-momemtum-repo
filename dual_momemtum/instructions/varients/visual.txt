@@ -1,0 +1,13 @@
+Detect any visually anomalous regions in this MRI scan. Focus on areas that exhibit:
+- Abnormal brightness or darkness (signal intensity changes) compared to healthy tissue.
+- Irregular textures or distinct boundaries.
+- Unexpected shapes or mass-like structures.
+
+Return bounding boxes of these visually abnormal areas as JSON format:
+If the image does not have the target, return the string: "no target".
+If detected, return a list of 2D bounding boxes in the following JSON format:
+```json
+[
+{"bbox_2d": [x1, y1, x2, y2], "label": "visual_anomaly"}
+]
+```

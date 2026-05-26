@@ -1,0 +1,402 @@
+[
+  {
+    "images": "/home/june/datasets/brain_tumor_dataset/images/test_img_00003_0.png",
+    "gt": "[[254, 73, 375, 161]]"
+  },
+  {
+    "images": "/home/june/datasets/brain_tumor_dataset/images/test_img_00012_0.png",
+    "gt": "[[166, 292, 242, 369]]"
+  },
+  {
+    "images": "/home/june/datasets/brain_tumor_dataset/images/test_img_00013_0.png",
+    "gt": "[[247, 256, 309, 336]]"
+  },
+  {
+    "images": "/home/june/datasets/brain_tumor_dataset/images/test_img_00015_0.png",
+    "gt": "[[272, 137, 393, 248]]"
+  },
+  {
+    "images": "/home/june/datasets/brain_tumor_dataset/images/test_img_00016_0.png",
+    "gt": "[[248, 141, 350, 235]]"
+  },
+  {
+    "images": "/home/june/datasets/brain_tumor_dataset/images/test_img_00022_0.png",
+    "gt": "[[187, 176, 264, 264]]"
+  },
+  {
+    "images": "/home/june/datasets/brain_tumor_dataset/images/test_img_00023_0.png",
+    "gt": "[[164, 91, 299, 221]]"
+  },
+  {
+    "images": "/home/june/datasets/brain_tumor_dataset/images/test_img_00028_0.png",
+    "gt": "[[266, 205, 384, 308]]"
+  },
+  {
+    "images": "/home/june/datasets/brain_tumor_dataset/images/test_img_00033_0.png",
+    "gt": "[[309, 312, 349, 352]]"
+  },
+  {
+    "images": "/home/june/datasets/brain_tumor_dataset/images/test_img_00035_0.png",
+    "gt": "[[230, 141, 326, 235]]"
+  },
+  {
+    "images": "/home/june/datasets/brain_tumor_dataset/images/test_img_00036_0.png",
+    "gt": "[[282, 255, 375, 334]]"
+  },
+  {
+    "images": "/home/june/datasets/brain_tumor_dataset/images/test_img_00040_0.png",
+    "gt": "[[324, 176, 436, 301]]"
+  },
+  {
+    "images": "/home/june/datasets/brain_tumor_dataset/images/test_img_00044_0.png",
+    "gt": "[[104, 132, 252, 296]]"
+  },
+  {
+    "images": "/home/june/datasets/brain_tumor_dataset/images/test_img_00047_0.png",
+    "gt": "[[204, 188, 247, 240]]"
+  },
+  {
+    "images": "/home/june/datasets/brain_tumor_dataset/images/test_img_00049_0.png",
+    "gt": "[[141, 236, 260, 369]]"
+  },
+  {
+    "images": "/home/june/datasets/brain_tumor_dataset/images/test_img_00051_0.png",
+    "gt": "[[120, 259, 205, 370]]"
+  },
+  {
+    "images": "/home/june/datasets/brain_tumor_dataset/images/test_img_00052_0.png",
+    "gt": "[[321, 173, 376, 239]]"
+  },
+  {
+    "images": "/home/june/datasets/brain_tumor_dataset/images/test_img_00057_0.png",
+    "gt": "[[176, 175, 222, 279]]"
+  },
+  {
+    "images": "/home/june/datasets/brain_tumor_dataset/images/test_img_00063_0.png",
+    "gt": "[[167, 264, 248, 352]]"
+  },
+  {
+    "images": "/home/june/datasets/brain_tumor_dataset/images/test_img_00071_0.png",
+    "gt": "[[229, 118, 326, 226]]"
+  },
+  {
+    "images": "/home/june/datasets/brain_tumor_dataset/images/test_img_00079_0.png",
+    "gt": "[[315, 288, 371, 340]]"
+  },
+  {
+    "images": "/home/june/datasets/brain_tumor_dataset/images/test_img_00081_0.png",
+    "gt": "[[157, 310, 206, 352]]"
+  },
+  {
+    "images": "/home/june/datasets/brain_tumor_dataset/images/test_img_00083_0.png",
+    "gt": "[[205, 229, 302, 325]]"
+  },
+  {
+    "images": "/home/june/datasets/brain_tumor_dataset/images/test_img_00087_0.png",
+    "gt": "[[105, 136, 145, 182]]"
+  },
+  {
+    "images": "/home/june/datasets/brain_tumor_dataset/images/test_img_00098_0.png",
+    "gt": "[[338, 123, 432, 262]]"
+  },
+  {
+    "images": "/home/june/datasets/brain_tumor_dataset/images/test_img_00101_0.png",
+    "gt": "[[236, 58, 376, 162]]"
+  },
+  {
+    "images": "/home/june/datasets/brain_tumor_dataset/images/test_img_00107_0.png",
+    "gt": "[[198, 86, 292, 158]]"
+  },
+  {
+    "images": "/home/june/datasets/brain_tumor_dataset/images/test_img_00108_0.png",
+    "gt": "[[192, 122, 246, 183]]"
+  },
+  {
+    "images": "/home/june/datasets/brain_tumor_dataset/images/test_img_00110_0.png",
+    "gt": "[[211, 224, 277, 293]]"
+  },
+  {
+    "images": "/home/june/datasets/brain_tumor_dataset/images/test_img_00111_0.png",
+    "gt": "[[188, 200, 220, 277]]"
+  },
+  {
+    "images": "/home/june/datasets/brain_tumor_dataset/images/test_img_00112_0.png",
+    "gt": "[[234, 186, 332, 279]]"
+  },
+  {
+    "images": "/home/june/datasets/brain_tumor_dataset/images/test_img_00114_0.png",
+    "gt": "[[170, 177, 233, 264]]"
+  },
+  {
+    "images": "/home/june/datasets/brain_tumor_dataset/images/test_img_00116_0.png",
+    "gt": "[[261, 232, 323, 293]]"
+  },
+  {
+    "images": "/home/june/datasets/brain_tumor_dataset/images/test_img_00117_0.png",
+    "gt": "[[116, 280, 195, 374]]"
+  },
+  {
+    "images": "/home/june/datasets/brain_tumor_dataset/images/test_img_00119_0.png",
+    "gt": "[[172, 207, 252, 283]]"
+  },
+  {
+    "images": "/home/june/datasets/brain_tumor_dataset/images/test_img_00125_0.png",
+    "gt": "[[234, 268, 336, 352]]"
+  },
+  {
+    "images": "/home/june/datasets/brain_tumor_dataset/images/test_img_00135_0.png",
+    "gt": "[[197, 263, 277, 362]]"
+  },
+  {
+    "images": "/home/june/datasets/brain_tumor_dataset/images/test_img_00136_0.png",
+    "gt": "[[257, 81, 353, 179]]"
+  },
+  {
+    "images": "/home/june/datasets/brain_tumor_dataset/images/test_img_00137_0.png",
+    "gt": "[[124, 262, 184, 334]]"
+  },
+  {
+    "images": "/home/june/datasets/brain_tumor_dataset/images/test_img_00138_0.png",
+    "gt": "[[271, 149, 389, 264]]"
+  },
+  {
+    "images": "/home/june/datasets/brain_tumor_dataset/images/test_img_00140_0.png",
+    "gt": "[[278, 155, 374, 280]]"
+  },
+  {
+    "images": "/home/june/datasets/brain_tumor_dataset/images/test_img_00142_0.png",
+    "gt": "[[21, 29, 203, 173]]"
+  },
+  {
+    "images": "/home/june/datasets/brain_tumor_dataset/images/test_img_00148_0.png",
+    "gt": "[[102, 67, 522, 571]]"
+  },
+  {
+    "images": "/home/june/datasets/brain_tumor_dataset/images/test_img_00150_0.png",
+    "gt": "[[20, 4, 208, 190]]"
+  },
+  {
+    "images": "/home/june/datasets/brain_tumor_dataset/images/test_img_00161_0.png",
+    "gt": "[[37, 52, 394, 508]]"
+  },
+  {
+    "images": "/home/june/datasets/brain_tumor_dataset/images/test_img_00166_0.png",
+    "gt": "[[1, 0, 225, 277]]"
+  },
+  {
+    "images": "/home/june/datasets/brain_tumor_dataset/images/test_img_00172_0.png",
+    "gt": "[[279, 51, 597, 270]]"
+  },
+  {
+    "images": "/home/june/datasets/brain_tumor_dataset/images/test_img_00174_0.png",
+    "gt": "[[14, 20, 190, 227]]"
+  },
+  {
+    "images": "/home/june/datasets/brain_tumor_dataset/images/test_img_00176_0.png",
+    "gt": "[[21, 1, 197, 124]]"
+  },
+  {
+    "images": "/home/june/datasets/brain_tumor_dataset/images/test_img_00181_0.png",
+    "gt": "[[43, 24, 181, 200]]"
+  },
+  {
+    "images": "/home/june/datasets/brain_tumor_dataset/images/test_img_00183_0.png",
+    "gt": "[[43, 24, 181, 200]]"
+  },
+  {
+    "images": "/home/june/datasets/brain_tumor_dataset/images/test_img_00185_0.png",
+    "gt": "[[78, 55, 367, 391]]"
+  },
+  {
+    "images": "/home/june/datasets/brain_tumor_dataset/images/test_img_00186_0.png",
+    "gt": "[[21, 13, 204, 216]]"
+  },
+  {
+    "images": "/home/june/datasets/brain_tumor_dataset/images/test_img_00189_0.png",
+    "gt": "[[101, 44, 525, 604]]"
+  },
+  {
+    "images": "/home/june/datasets/brain_tumor_dataset/images/test_img_00193_0.png",
+    "gt": "[[34, 54, 392, 509]]"
+  },
+  {
+    "images": "/home/june/datasets/brain_tumor_dataset/images/test_img_00194_0.png",
+    "gt": "[[104, 41, 401, 290]]"
+  },
+  {
+    "images": "/home/june/datasets/brain_tumor_dataset/images/test_img_00205_0.png",
+    "gt": "[[41, 24, 209, 218]]"
+  },
+  {
+    "images": "/home/june/datasets/brain_tumor_dataset/images/test_img_00214_0.png",
+    "gt": "[[23, 18, 210, 253]]"
+  },
+  {
+    "images": "/home/june/datasets/brain_tumor_dataset/images/test_img_00216_0.png",
+    "gt": "[[15, 10, 336, 414]]"
+  },
+  {
+    "images": "/home/june/datasets/brain_tumor_dataset/images/test_img_00229_0.png",
+    "gt": "[[3, 16, 222, 281]]"
+  },
+  {
+    "images": "/home/june/datasets/brain_tumor_dataset/images/test_img_00232_0.png",
+    "gt": "[[159, 86, 646, 528]]"
+  },
+  {
+    "images": "/home/june/datasets/brain_tumor_dataset/images/test_img_00235_0.png",
+    "gt": "[[137, 404, 1311, 1446]]"
+  },
+  {
+    "images": "/home/june/datasets/brain_tumor_dataset/images/test_img_00236_0.png",
+    "gt": "[[73, 66, 276, 317]]"
+  },
+  {
+    "images": "/home/june/datasets/brain_tumor_dataset/images/test_img_00258_0.png",
+    "gt": "[[192, 113, 240, 163]]"
+  },
+  {
+    "images": "/home/june/datasets/brain_tumor_dataset/images/test_img_00273_0.png",
+    "gt": "[[260, 201, 372, 266]]"
+  },
+  {
+    "images": "/home/june/datasets/brain_tumor_dataset/images/test_img_00274_0.png",
+    "gt": "[[149, 92, 228, 199]]"
+  },
+  {
+    "images": "/home/june/datasets/brain_tumor_dataset/images/test_img_00279_0.png",
+    "gt": "[[162, 264, 207, 328]]"
+  },
+  {
+    "images": "/home/june/datasets/brain_tumor_dataset/images/test_img_00282_0.png",
+    "gt": "[[137, 235, 200, 296]]"
+  },
+  {
+    "images": "/home/june/datasets/brain_tumor_dataset/images/test_img_00285_0.png",
+    "gt": "[[225, 258, 291, 315]]"
+  },
+  {
+    "images": "/home/june/datasets/brain_tumor_dataset/images/test_img_00287_0.png",
+    "gt": "[[170, 187, 268, 268]]"
+  },
+  {
+    "images": "/home/june/datasets/brain_tumor_dataset/images/test_img_00295_0.png",
+    "gt": "[[204, 128, 244, 182]]"
+  },
+  {
+    "images": "/home/june/datasets/brain_tumor_dataset/images/test_img_00301_0.png",
+    "gt": "[[137, 237, 194, 284]]"
+  },
+  {
+    "images": "/home/june/datasets/brain_tumor_dataset/images/test_img_00302_0.png",
+    "gt": "[[140, 150, 225, 285]]"
+  },
+  {
+    "images": "/home/june/datasets/brain_tumor_dataset/images/test_img_00308_0.png",
+    "gt": "[[130, 161, 196, 218]]"
+  },
+  {
+    "images": "/home/june/datasets/brain_tumor_dataset/images/test_img_00309_0.png",
+    "gt": "[[272, 190, 357, 271]]"
+  },
+  {
+    "images": "/home/june/datasets/brain_tumor_dataset/images/test_img_00311_0.png",
+    "gt": "[[180, 205, 264, 308]]"
+  },
+  {
+    "images": "/home/june/datasets/brain_tumor_dataset/images/test_img_00316_0.png",
+    "gt": "[[168, 206, 266, 291]]"
+  },
+  {
+    "images": "/home/june/datasets/brain_tumor_dataset/images/test_img_00317_0.png",
+    "gt": "[[236, 82, 300, 178]]"
+  },
+  {
+    "images": "/home/june/datasets/brain_tumor_dataset/images/test_img_00321_0.png",
+    "gt": "[[293, 162, 371, 223]]"
+  },
+  {
+    "images": "/home/june/datasets/brain_tumor_dataset/images/test_img_00327_0.png",
+    "gt": "[[279, 301, 353, 380]]"
+  },
+  {
+    "images": "/home/june/datasets/brain_tumor_dataset/images/test_img_00332_0.png",
+    "gt": "[[147, 222, 218, 270]]"
+  },
+  {
+    "images": "/home/june/datasets/brain_tumor_dataset/images/test_img_00333_0.png",
+    "gt": "[[257, 100, 340, 189]]"
+  },
+  {
+    "images": "/home/june/datasets/brain_tumor_dataset/images/test_img_00336_0.png",
+    "gt": "[[248, 202, 331, 307]]"
+  },
+  {
+    "images": "/home/june/datasets/brain_tumor_dataset/images/test_img_00346_0.png",
+    "gt": "[[258, 186, 383, 327]]"
+  },
+  {
+    "images": "/home/june/datasets/brain_tumor_dataset/images/test_img_00347_0.png",
+    "gt": "[[187, 296, 235, 346]]"
+  },
+  {
+    "images": "/home/june/datasets/brain_tumor_dataset/images/test_img_00353_0.png",
+    "gt": "[[252, 64, 356, 189]]"
+  },
+  {
+    "images": "/home/june/datasets/brain_tumor_dataset/images/test_img_00358_0.png",
+    "gt": "[[278, 202, 308, 232]]"
+  },
+  {
+    "images": "/home/june/datasets/brain_tumor_dataset/images/test_img_00359_0.png",
+    "gt": "[[265, 237, 284, 248]]"
+  },
+  {
+    "images": "/home/june/datasets/brain_tumor_dataset/images/test_img_00361_0.png",
+    "gt": "[[282, 188, 386, 291]]"
+  },
+  {
+    "images": "/home/june/datasets/brain_tumor_dataset/images/test_img_00366_0.png",
+    "gt": "[[265, 248, 354, 334]]"
+  },
+  {
+    "images": "/home/june/datasets/brain_tumor_dataset/images/test_img_00372_0.png",
+    "gt": "[[269, 241, 313, 291]]"
+  },
+  {
+    "images": "/home/june/datasets/brain_tumor_dataset/images/test_img_00374_0.png",
+    "gt": "[[242, 117, 339, 215]]"
+  },
+  {
+    "images": "/home/june/datasets/brain_tumor_dataset/images/test_img_00376_0.png",
+    "gt": "[[291, 179, 363, 279]]"
+  },
+  {
+    "images": "/home/june/datasets/brain_tumor_dataset/images/test_img_00377_0.png",
+    "gt": "[[359, 222, 401, 271]]"
+  },
+  {
+    "images": "/home/june/datasets/brain_tumor_dataset/images/test_img_00379_0.png",
+    "gt": "[[247, 118, 336, 222]]"
+  },
+  {
+    "images": "/home/june/datasets/brain_tumor_dataset/images/test_img_00380_0.png",
+    "gt": "[[254, 132, 357, 254]]"
+  },
+  {
+    "images": "/home/june/datasets/brain_tumor_dataset/images/test_img_00383_0.png",
+    "gt": "[[128, 168, 184, 233]]"
+  },
+  {
+    "images": "/home/june/datasets/brain_tumor_dataset/images/test_img_00384_0.png",
+    "gt": "[[336, 299, 385, 352]]"
+  },
+  {
+    "images": "/home/june/datasets/brain_tumor_dataset/images/test_img_00387_0.png",
+    "gt": "[[307, 201, 400, 303]]"
+  },
+  {
+    "images": "/home/june/datasets/brain_tumor_dataset/images/test_img_00389_0.png",
+    "gt": "[[247, 126, 353, 253]]"
+  }
+]

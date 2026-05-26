@@ -1,0 +1,15 @@
+Analyze this MRI image step-by-step.
+1. First, check for symmetry. Is there any asymmetry between the left and right hemispheres (if brain) or anatomical structures?
+2. Look for abnormal signal intensities (hyperintense or hypointense regions) that differ from the surrounding tissue.
+3. Identify any mass effects or distortions.
+
+Based on this analysis, determine if there are any abnormal areas.
+- If no abnormalities are found, output: "no target".
+- If found, output the bounding boxes in the specified JSON format ONLY at the end of your response.
+
+JSON Format:
+```json
+[
+{"bbox_2d": [x1, y1, x2, y2], "label": "abnormality"}
+]
+```

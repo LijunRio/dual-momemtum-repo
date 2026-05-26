@@ -1,0 +1,11 @@
+Act as an expert radiologist. Analyze the provided MRI scan to identify any pathological abnormalities such as tumors, lesions, edema, or structural anomalies.
+
+Your task is to localize these abnormalities.
+If the image appears normal with no clinically significant findings, return the string: "no target".
+
+If abnormalities are detected, return a list of 2D bounding boxes in the following JSON format:
+```json
+[
+{"bbox_2d": [x1, y1, x2, y2], "label": "specific_abnormality_name"}
+]
+```

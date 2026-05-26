@@ -1,0 +1,14 @@
+Examine the MRI image for any signs of pathology. Pay close attention to the tissue texture and structural integrity.
+Scan for:
+1. Space-occupying lesions (tumors, cysts).
+2. Areas of inflammation or edema.
+3. Vascular abnormalities.
+
+Return the result strictly in the following JSON format.
+If no pathology is visible, return: "no target".
+
+```json
+[
+{"bbox_2d": [x1, y1, x2, y2], "label": "pathology_type"}
+]
+```

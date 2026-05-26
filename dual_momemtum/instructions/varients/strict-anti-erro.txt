@@ -1,0 +1,12 @@
+Identify bounding boxes for clinically significant abnormalities strictly. Do not flag artifacts or noise. Only flag regions with high confidence of being a lesion, tumor, or infarct.
+
+Output Requirement:
+1. Return ONLY the JSON string. Do not include markdown formatting or explanations.
+2. If no high-confidence abnormalities are found, return exactly: "no target".
+
+JSON Schema:
+```json
+[
+{"bbox_2d": [x1, y1, x2, y2], "label": "abnormality"}
+]
+```

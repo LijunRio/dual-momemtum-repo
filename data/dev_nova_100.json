@@ -1,0 +1,402 @@
+[
+  {
+    "images": "/home/june/datasets/nova/images/test_img_00006_0.png",
+    "gt": "[[133, 0, 259, 156]]"
+  },
+  {
+    "images": "/home/june/datasets/nova/images/test_img_00025_0.png",
+    "gt": "[[4, 100, 270, 269]]"
+  },
+  {
+    "images": "/home/june/datasets/nova/images/test_img_00027_0.png",
+    "gt": "[[205, 195, 362, 315]]"
+  },
+  {
+    "images": "/home/june/datasets/nova/images/test_img_00030_0.png",
+    "gt": "[[97, 33, 406, 171]]"
+  },
+  {
+    "images": "/home/june/datasets/nova/images/test_img_00032_0.png",
+    "gt": "[[46, 319, 247, 462]]"
+  },
+  {
+    "images": "/home/june/datasets/nova/images/test_img_00044_0.png",
+    "gt": "[[214, 292, 246, 378]]"
+  },
+  {
+    "images": "/home/june/datasets/nova/images/test_img_00046_0.png",
+    "gt": "[[156, 266, 323, 344]]"
+  },
+  {
+    "images": "/home/june/datasets/nova/images/test_img_00071_0.png",
+    "gt": "[[138, 187, 342, 327]]"
+  },
+  {
+    "images": "/home/june/datasets/nova/images/test_img_00073_0.png",
+    "gt": "[[228, 182, 292, 267]]"
+  },
+  {
+    "images": "/home/june/datasets/nova/images/test_img_00080_0.png",
+    "gt": "[[286, 272, 354, 349]]"
+  },
+  {
+    "images": "/home/june/datasets/nova/images/test_img_00081_0.png",
+    "gt": "[[121, 268, 195, 326]]"
+  },
+  {
+    "images": "/home/june/datasets/nova/images/test_img_00089_0.png",
+    "gt": "[[34, 306, 453, 462]]"
+  },
+  {
+    "images": "/home/june/datasets/nova/images/test_img_00094_0.png",
+    "gt": "[[133, 236, 390, 441]]"
+  },
+  {
+    "images": "/home/june/datasets/nova/images/test_img_00095_0.png",
+    "gt": "[[164, 227, 391, 404]]"
+  },
+  {
+    "images": "/home/june/datasets/nova/images/test_img_00099_0.png",
+    "gt": "[[185, 208, 264, 272]]"
+  },
+  {
+    "images": "/home/june/datasets/nova/images/test_img_00103_0.png",
+    "gt": "[[91, 114, 264, 336]]"
+  },
+  {
+    "images": "/home/june/datasets/nova/images/test_img_00104_0.png",
+    "gt": "[[100, 117, 272, 348]]"
+  },
+  {
+    "images": "/home/june/datasets/nova/images/test_img_00114_0.png",
+    "gt": "[[73, 122, 154, 276]]"
+  },
+  {
+    "images": "/home/june/datasets/nova/images/test_img_00127_0.png",
+    "gt": "[[190, 389, 329, 470]]"
+  },
+  {
+    "images": "/home/june/datasets/nova/images/test_img_00142_0.png",
+    "gt": "[[58, 8, 442, 474]]"
+  },
+  {
+    "images": "/home/june/datasets/nova/images/test_img_00159_0.png",
+    "gt": "[[219, 187, 293, 264]]"
+  },
+  {
+    "images": "/home/june/datasets/nova/images/test_img_00163_0.png",
+    "gt": "[[110, 42, 374, 144]]"
+  },
+  {
+    "images": "/home/june/datasets/nova/images/test_img_00166_0.png",
+    "gt": "[[153, 230, 295, 332]]"
+  },
+  {
+    "images": "/home/june/datasets/nova/images/test_img_00175_0.png",
+    "gt": "[[138, 100, 331, 380]]"
+  },
+  {
+    "images": "/home/june/datasets/nova/images/test_img_00196_0.png",
+    "gt": "[[146, 145, 265, 228]]"
+  },
+  {
+    "images": "/home/june/datasets/nova/images/test_img_00203_0.png",
+    "gt": "[[249, 19, 413, 469]]"
+  },
+  {
+    "images": "/home/june/datasets/nova/images/test_img_00214_0.png",
+    "gt": "[[90, 192, 190, 368]]"
+  },
+  {
+    "images": "/home/june/datasets/nova/images/test_img_00220_0.png",
+    "gt": "[[241, 298, 336, 394]]"
+  },
+  {
+    "images": "/home/june/datasets/nova/images/test_img_00223_0.png",
+    "gt": "[[232, 255, 341, 345]]"
+  },
+  {
+    "images": "/home/june/datasets/nova/images/test_img_00225_0.png",
+    "gt": "[[254, 296, 373, 410]]"
+  },
+  {
+    "images": "/home/june/datasets/nova/images/test_img_00228_0.png",
+    "gt": "[[216, 269, 286, 338]]"
+  },
+  {
+    "images": "/home/june/datasets/nova/images/test_img_00233_0.png",
+    "gt": "[[83, 116, 328, 319]]"
+  },
+  {
+    "images": "/home/june/datasets/nova/images/test_img_00238_0.png",
+    "gt": "[[285, 148, 317, 211]]"
+  },
+  {
+    "images": "/home/june/datasets/nova/images/test_img_00250_0.png",
+    "gt": "[[179, 251, 284, 330]]"
+  },
+  {
+    "images": "/home/june/datasets/nova/images/test_img_00270_0.png",
+    "gt": "[[195, 402, 277, 476]]"
+  },
+  {
+    "images": "/home/june/datasets/nova/images/test_img_00273_0.png",
+    "gt": "[[293, 153, 333, 216]]"
+  },
+  {
+    "images": "/home/june/datasets/nova/images/test_img_00281_0.png",
+    "gt": "[[91, 93, 212, 245]]"
+  },
+  {
+    "images": "/home/june/datasets/nova/images/test_img_00284_0.png",
+    "gt": "[[124, 93, 361, 461]]"
+  },
+  {
+    "images": "/home/june/datasets/nova/images/test_img_00296_0.png",
+    "gt": "[[256, 182, 378, 446]]"
+  },
+  {
+    "images": "/home/june/datasets/nova/images/test_img_00300_0.png",
+    "gt": "[[50, 172, 162, 299]]"
+  },
+  {
+    "images": "/home/june/datasets/nova/images/test_img_00344_0.png",
+    "gt": "[[113, 100, 356, 398]]"
+  },
+  {
+    "images": "/home/june/datasets/nova/images/test_img_00348_0.png",
+    "gt": "[[103, 41, 366, 420]]"
+  },
+  {
+    "images": "/home/june/datasets/nova/images/test_img_00352_0.png",
+    "gt": "[[145, 285, 327, 414]]"
+  },
+  {
+    "images": "/home/june/datasets/nova/images/test_img_00363_0.png",
+    "gt": "[[249, 45, 372, 131]]"
+  },
+  {
+    "images": "/home/june/datasets/nova/images/test_img_00367_0.png",
+    "gt": "[[216, 236, 288, 322]]"
+  },
+  {
+    "images": "/home/june/datasets/nova/images/test_img_00370_0.png",
+    "gt": "[[17, 23, 261, 282]]"
+  },
+  {
+    "images": "/home/june/datasets/nova/images/test_img_00373_0.png",
+    "gt": "[[174, 234, 275, 304]]"
+  },
+  {
+    "images": "/home/june/datasets/nova/images/test_img_00379_0.png",
+    "gt": "[[25, 38, 143, 276]]"
+  },
+  {
+    "images": "/home/june/datasets/nova/images/test_img_00387_0.png",
+    "gt": "[[204, 94, 268, 180]]"
+  },
+  {
+    "images": "/home/june/datasets/nova/images/test_img_00389_0.png",
+    "gt": "[[211, 119, 246, 174]]"
+  },
+  {
+    "images": "/home/june/datasets/nova/images/test_img_00429_0.png",
+    "gt": "[[180, 235, 302, 338]]"
+  },
+  {
+    "images": "/home/june/datasets/nova/images/test_img_00432_0.png",
+    "gt": "[[200, 102, 369, 297]]"
+  },
+  {
+    "images": "/home/june/datasets/nova/images/test_img_00459_0.png",
+    "gt": "[[276, 55, 444, 249]]"
+  },
+  {
+    "images": "/home/june/datasets/nova/images/test_img_00464_0.png",
+    "gt": "[[200, 252, 275, 327]]"
+  },
+  {
+    "images": "/home/june/datasets/nova/images/test_img_00470_0.png",
+    "gt": "[[292, 142, 368, 213]]"
+  },
+  {
+    "images": "/home/june/datasets/nova/images/test_img_00517_0.png",
+    "gt": "[[234, 98, 327, 204]]"
+  },
+  {
+    "images": "/home/june/datasets/nova/images/test_img_00546_0.png",
+    "gt": "[[179, 38, 281, 447]]"
+  },
+  {
+    "images": "/home/june/datasets/nova/images/test_img_00549_0.png",
+    "gt": "[[190, 262, 271, 324]]"
+  },
+  {
+    "images": "/home/june/datasets/nova/images/test_img_00558_0.png",
+    "gt": "[[123, 255, 239, 417]]"
+  },
+  {
+    "images": "/home/june/datasets/nova/images/test_img_00565_0.png",
+    "gt": "[[99, 269, 365, 396]]"
+  },
+  {
+    "images": "/home/june/datasets/nova/images/test_img_00574_0.png",
+    "gt": "[[166, 172, 207, 224]]"
+  },
+  {
+    "images": "/home/june/datasets/nova/images/test_img_00591_0.png",
+    "gt": "[[219, 278, 277, 334]]"
+  },
+  {
+    "images": "/home/june/datasets/nova/images/test_img_00603_0.png",
+    "gt": "[[212, 186, 276, 231]]"
+  },
+  {
+    "images": "/home/june/datasets/nova/images/test_img_00604_0.png",
+    "gt": "[[34, 117, 205, 259]]"
+  },
+  {
+    "images": "/home/june/datasets/nova/images/test_img_00616_0.png",
+    "gt": "[[140, 282, 245, 362]]"
+  },
+  {
+    "images": "/home/june/datasets/nova/images/test_img_00618_0.png",
+    "gt": "[[135, 274, 255, 379]]"
+  },
+  {
+    "images": "/home/june/datasets/nova/images/test_img_00623_0.png",
+    "gt": "[[303, 256, 380, 301]]"
+  },
+  {
+    "images": "/home/june/datasets/nova/images/test_img_00633_0.png",
+    "gt": "[[30, 51, 242, 327]]"
+  },
+  {
+    "images": "/home/june/datasets/nova/images/test_img_00643_0.png",
+    "gt": "[[102, 156, 317, 303]]"
+  },
+  {
+    "images": "/home/june/datasets/nova/images/test_img_00650_0.png",
+    "gt": "[[251, 78, 367, 249]]"
+  },
+  {
+    "images": "/home/june/datasets/nova/images/test_img_00654_0.png",
+    "gt": "[[248, 94, 371, 212]]"
+  },
+  {
+    "images": "/home/june/datasets/nova/images/test_img_00663_0.png",
+    "gt": "[[37, 110, 423, 363]]"
+  },
+  {
+    "images": "/home/june/datasets/nova/images/test_img_00665_0.png",
+    "gt": "[[38, 1, 303, 251]]"
+  },
+  {
+    "images": "/home/june/datasets/nova/images/test_img_00677_0.png",
+    "gt": "[[73, 81, 393, 244]]"
+  },
+  {
+    "images": "/home/june/datasets/nova/images/test_img_00686_0.png",
+    "gt": "[[277, 127, 339, 219]]"
+  },
+  {
+    "images": "/home/june/datasets/nova/images/test_img_00692_0.png",
+    "gt": "[[208, 15, 250, 55]]"
+  },
+  {
+    "images": "/home/june/datasets/nova/images/test_img_00699_0.png",
+    "gt": "[[230, 80, 377, 253]]"
+  },
+  {
+    "images": "/home/june/datasets/nova/images/test_img_00714_0.png",
+    "gt": "[[127, 146, 207, 291]]"
+  },
+  {
+    "images": "/home/june/datasets/nova/images/test_img_00718_0.png",
+    "gt": "[[206, 141, 318, 282]]"
+  },
+  {
+    "images": "/home/june/datasets/nova/images/test_img_00721_0.png",
+    "gt": "[[207, 110, 269, 158]]"
+  },
+  {
+    "images": "/home/june/datasets/nova/images/test_img_00733_0.png",
+    "gt": "[[180, 199, 294, 312]]"
+  },
+  {
+    "images": "/home/june/datasets/nova/images/test_img_00747_0.png",
+    "gt": "[[103, 287, 211, 412]]"
+  },
+  {
+    "images": "/home/june/datasets/nova/images/test_img_00754_0.png",
+    "gt": "[[226, 182, 429, 418]]"
+  },
+  {
+    "images": "/home/june/datasets/nova/images/test_img_00758_0.png",
+    "gt": "[[187, 72, 430, 315]]"
+  },
+  {
+    "images": "/home/june/datasets/nova/images/test_img_00759_0.png",
+    "gt": "[[182, 199, 299, 279]]"
+  },
+  {
+    "images": "/home/june/datasets/nova/images/test_img_00777_0.png",
+    "gt": "[[176, 179, 208, 262]]"
+  },
+  {
+    "images": "/home/june/datasets/nova/images/test_img_00781_0.png",
+    "gt": "[[232, 207, 384, 412]]"
+  },
+  {
+    "images": "/home/june/datasets/nova/images/test_img_00791_0.png",
+    "gt": "[[260, 18, 379, 132]]"
+  },
+  {
+    "images": "/home/june/datasets/nova/images/test_img_00821_0.png",
+    "gt": "[[264, 199, 346, 280]]"
+  },
+  {
+    "images": "/home/june/datasets/nova/images/test_img_00825_0.png",
+    "gt": "[[215, 238, 271, 296]]"
+  },
+  {
+    "images": "/home/june/datasets/nova/images/test_img_00826_0.png",
+    "gt": "[[202, 229, 278, 299]]"
+  },
+  {
+    "images": "/home/june/datasets/nova/images/test_img_00828_0.png",
+    "gt": "[[216, 282, 264, 325]]"
+  },
+  {
+    "images": "/home/june/datasets/nova/images/test_img_00855_0.png",
+    "gt": "[[154, 157, 316, 240]]"
+  },
+  {
+    "images": "/home/june/datasets/nova/images/test_img_00862_0.png",
+    "gt": "[[251, 16, 384, 180]]"
+  },
+  {
+    "images": "/home/june/datasets/nova/images/test_img_00871_0.png",
+    "gt": "[[152, 106, 347, 311]]"
+  },
+  {
+    "images": "/home/june/datasets/nova/images/test_img_00877_0.png",
+    "gt": "[[154, 248, 324, 414]]"
+  },
+  {
+    "images": "/home/june/datasets/nova/images/test_img_00885_0.png",
+    "gt": "[[296, 11, 400, 90]]"
+  },
+  {
+    "images": "/home/june/datasets/nova/images/test_img_00890_0.png",
+    "gt": "[[242, 314, 275, 377]]"
+  },
+  {
+    "images": "/home/june/datasets/nova/images/test_img_00893_0.png",
+    "gt": "[[145, 278, 355, 412]]"
+  },
+  {
+    "images": "/home/june/datasets/nova/images/test_img_00896_0.png",
+    "gt": "[[252, 164, 330, 244]]"
+  }
+]

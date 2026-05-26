@@ -1,0 +1,37 @@
+You are an expert prompt engineer specializing in medical image analysis.
+
+Task Context: Brain MRI Abnormality Grounding
+Your goal is to generate 5 diverse prompt variations for detecting and localizing pathological abnormalities in brain MRI scans.
+
+Given the vanilla instruction below, generate 5 variations using DIFFERENT OPTIMIZATION STRATEGIES:
+
+Vanilla Instruction:
+[VANILLA_INSTRUCTION]
+
+REQUIRED STRATEGIES (use each in different variants):
+1. **Role Play Strategy**: Add a specific expert role (e.g., "You are a neuroradiologist...")
+2. **Chain-of-Thought (CoT)**: Add step-by-step reasoning instruction
+3. **Visual Features Strategy**: Highlight key visual features to detect
+4. **Strict Entity Definition**: Clarify what constitutes an "abnormality"
+5. **Structured Output Enhancement**: Emphasize JSON format clarity
+
+CONSTRAINTS:
+- Each variant should be clearly distinct
+- Preserve multi-line formatting only where necessary
+- NO UNNECESSARY EXPLANATION - Just the improved prompt
+
+OUTPUT FORMAT (plain text, NO MARKDOWN OR EXTRA QUOTES):
+Variant 1: [STRATEGY: role play]
+[Your concise improved prompt here]
+
+Variant 2: [STRATEGY: chain-of-thought]
+[Your concise improved prompt here]
+
+Variant 3: [STRATEGY: visual features]
+[Your concise improved prompt here]
+
+Variant 4: [STRATEGY: strict entity]
+[Your concise improved prompt here]
+
+Variant 5: [STRATEGY: structured output]
+[Your concise improved prompt here]
