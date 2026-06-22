@@ -1,4 +1,5 @@
 **/__pycache__/
 **/*.pyc
 **/*.pyo
+0paper/
 dual_momemtum/job_mcml.sbatch

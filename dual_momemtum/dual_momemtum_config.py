@@ -41,14 +41,14 @@ DUAL_MOMEMTUM_CONFIG = {
 
     # Meta-LLM (used by both language_momemtum and visual_momemtum)
     'meta_llm_api_base': "https://openrouter.ai/api/v1",
-    'meta_llm_model': 'openai/gpt-4o-2024-11-20',
+    'meta_llm_model': 'openai/gpt-4o-2024-11-20', # google/gemini-3-flash-preview
     'meta_llm_api_key': 'You-API-Key',
     'meta_llm_temperature': 0.7,
     'meta_llm_use_vision': True,  # visual_momemtum requires multimodal capability
 
 
     # Search parameters
-    'num_iterations': 5,
+    'num_iterations': 5, #standard 20  test 5
     'top_k': 3,
     'bottom_k': 3,
     'max_patience': 20,
@@ -62,7 +62,7 @@ DUAL_MOMEMTUM_CONFIG = {
     'enable_visual_feedback': True,
     'allow_switch_back_to_tpe': True,
     'visual_plateau_window': 5,
-    'visual_sub_loop_patience': 3,
+    'visual_sub_loop_patience': 5, # test 3
     'ablation_mode': None,  # None | 'language_only' | 'visual_only'
 }
 
