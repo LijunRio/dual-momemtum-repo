@@ -1,0 +1,11 @@
+Return precise bounding boxes of abnormal areas (e.g., tumors, irregular masses, unusual textures, or regions with distinct brightness/darkness) as JSON format:
+- If the image does not contain abnormalities, return "no target."
+- Abnormal areas may appear as irregular shapes, sharp boundaries, unusual textures, or regions with high contrast compared to adjacent tissue. 
+- Ensure bounding boxes tightly enclose only the abnormal regions without including surrounding normal tissue.
+- Return results in the following JSON format:
+```json
+[
+  {"bbox_2d": [x1, y1, x2, y2], "label": "label"},
+  ...
+]
+```
