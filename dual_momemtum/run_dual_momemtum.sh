@@ -6,7 +6,7 @@
 # Configuration (overrides dual_momemtum_config.py)
 # ============================================================================
 
-ITERATIONS=10
+ITERATIONS=20
 
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 DATA_DIR="${SCRIPT_DIR}/../data"
