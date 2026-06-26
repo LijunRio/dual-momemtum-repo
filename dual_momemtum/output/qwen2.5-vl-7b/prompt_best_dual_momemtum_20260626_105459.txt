@@ -1,0 +1,17 @@
+Detect and return bounding boxes for clinically significant abnormalities in medical images. Focus on regions exhibiting:
+1. Irregular intensity patterns (e.g., hyperintense or hypointense areas).
+2. Irregular shapes or disrupted structural integrity.
+3. Areas suggestive of lesions, tumors, infarcts, or other pathological changes.
+
+Output Requirements:
+- Return ONLY the JSON string. Do not include markdown formatting or explanations.
+- If no high-confidence abnormalities matching the above criteria are found, return exactly: "no target".
+
+JSON Schema:
+```json
+[
+  {"bbox_2d": [x1, y1, x2, y2], "label": "abnormality"}
+]
+```
+
+Exclude artifacts, noise, or normal anatomical variations. Ensure bounding boxes tightly align with the edges of the abnormal regions.
