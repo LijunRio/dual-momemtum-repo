@@ -1,0 +1,126 @@
+{
+  "timestamp": "20260626_093532",
+  "generation": 3,
+  "population": {
+    "base": {
+      "text": "Return bounding boxes of any abnormal areas as JSON format:\nIf the image do not have the target, return the string: \"no target\".\nIf detected, return a list of 2D bounding boxes around the target regions in the following JSON format:\n```json\n[\n{\"bbox_2d\": [x1, y1, x2, y2], \"label\": \"label\"},\n...\n]\n```",
+      "score": 0.13,
+      "source": "base.txt",
+      "generation": 0
+    },
+    "strict-anti-erro": {
+      "text": "Identify bounding boxes for clinically significant abnormalities strictly. Do not flag artifacts or noise. Only flag regions with high confidence of being a lesion, tumor, or infarct.\n\nOutput Requirement:\n1. Return ONLY the JSON string. Do not include markdown formatting or explanations.\n2. If no high-confidence abnormalities are found, return exactly: \"no target\".\n\nJSON Schema:\n```json\n[\n{\"bbox_2d\": [x1, y1, x2, y2], \"label\": \"abnormality\"}\n]\n```",
+      "score": 0.1,
+      "source": "variant",
+      "generation": 0
+    },
+    "multi-guilty": {
+      "text": "Examine the MRI image for any signs of pathology. Pay close attention to the tissue texture and structural integrity.\nScan for:\n1. Space-occupying lesions (tumors, cysts).\n2. Areas of inflammation or edema.\n3. Vascular abnormalities.\n\nReturn the result strictly in the following JSON format.\nIf no pathology is visible, return: \"no target\".\n\n```json\n[\n{\"bbox_2d\": [x1, y1, x2, y2], \"label\": \"pathology_type\"}\n]\n```",
+      "score": 0.08,
+      "source": "variant",
+      "generation": 0
+    },
+    "visual": {
+      "text": "Detect any visually anomalous regions in this MRI scan. Focus on areas that exhibit:\n- Abnormal brightness or darkness (signal intensity changes) compared to healthy tissue.\n- Irregular textures or distinct boundaries.\n- Unexpected shapes or mass-like structures.\n\nReturn bounding boxes of these visually abnormal areas as JSON format:\nIf the image does not have the target, return the string: \"no target\".\nIf detected, return a list of 2D bounding boxes in the following JSON format:\n```json\n[\n{\"bbox_2d\": [x1, y1, x2, y2], \"label\": \"visual_anomaly\"}\n]\n```",
+      "score": 0.12,
+      "source": "variant",
+      "generation": 0
+    },
+    "cot": {
+      "text": "Analyze this MRI image step-by-step.\n1. First, check for symmetry. Is there any asymmetry between the left and right hemispheres (if brain) or anatomical structures?\n2. Look for abnormal signal intensities (hyperintense or hypointense regions) that differ from the surrounding tissue.\n3. Identify any mass effects or distortions.\n\nBased on this analysis, determine if there are any abnormal areas.\n- If no abnormalities are found, output: \"no target\".\n- If found, output the bounding boxes in the specified JSON format ONLY at the end of your response.\n\nJSON Format:\n```json\n[\n{\"bbox_2d\": [x1, y1, x2, y2], \"label\": \"abnormality\"}\n]\n```",
+      "score": 0.02,
+      "source": "variant",
+      "generation": 0
+    },
+    "role-play": {
+      "text": "Act as an expert radiologist. Analyze the provided MRI scan to identify any pathological abnormalities such as tumors, lesions, edema, or structural anomalies.\n\nYour task is to localize these abnormalities.\nIf the image appears normal with no clinically significant findings, return the string: \"no target\".\n\nIf abnormalities are detected, return a list of 2D bounding boxes in the following JSON format:\n```json\n[\n{\"bbox_2d\": [x1, y1, x2, y2], \"label\": \"specific_abnormality_name\"}\n]\n```",
+      "score": 0.1,
+      "source": "variant",
+      "generation": 0
+    },
+    "visual_momemtum_gen_0_vf1": {
+      "text": "Return 2D bounding boxes for any abnormal areas (e.g., tumors, white masses, or regions with abnormal textures, shapes, or intensities) in the image as JSON format. Prioritize bounding box alignment closely with the boundaries of the detected anomalies. If the image does not contain the target, return the string: \"no target.\"\n\nIf detected, return a list of 2D bounding boxes around the target regions in the following JSON format:\n```json\n[\n  {\"bbox_2d\": [x1, y1, x2, y2], \"label\": \"label\"},\n  ...\n]\n```\n\nEnsure that bounding boxes focus on regions with significant variations in intensity, texture, or shape compared to surrounding tissues to maximize overlap accuracy with the target.",
+      "score": 0.13,
+      "source": "visual_momemtum",
+      "generation": 0
+    },
+    "visual_momemtum_gen_0_vf2": {
+      "text": "Identify and return bounding boxes for any abnormal areas visible in the medical image. An \"abnormal area\" is defined as any region showing irregularities such as hyperintense or hypointense regions, irregular masses, or tumor-like structures compared to surrounding tissues. \n\nIf no abnormalities are detected, return the string: \"no target.\" If abnormalities are detected, return a list of 2D bounding boxes with precise overlap around the target regions in the following JSON format:\n\n```json\n[\n  {\"bbox_2d\": [x1, y1, x2, y2], \"label\": \"label\"},\n  ...\n]\n```\nEnsure that the bounding boxes tightly align with the actual abnormal regions and avoid unrelated areas.",
+      "score": 0.13,
+      "source": "visual_momemtum",
+      "generation": 0
+    },
+    "visual_momemtum_gen_0_vf3": {
+      "text": "Return 2D bounding boxes of any abnormal areas, such as tumors, lesions, or white masses, as JSON format:\n- Focus on identifying regions with abnormal shapes, high-density areas, or distortions in the surrounding structure.\n- Ensure bounding boxes tightly encompass the abnormal areas without including unrelated regions.\n- If no abnormalities are detected in the image, return the string: \"no target\".\n- If abnormalities are detected, output a list of 2D bounding boxes in the following JSON format:\n```json\n[\n  {\"bbox_2d\": [x1, y1, x2, y2], \"label\": \"abnormality\"},\n  ...\n]\n```",
+      "score": 0.12,
+      "source": "visual_momemtum",
+      "generation": 0
+    },
+    "visual_momemtum_gen_0_vf4": {
+      "text": "Analyze the medical image to detect any abnormal areas (e.g., tumors, white masses, dark lesions) characterized by irregular intensity, shape, or texture compared to surrounding tissues. Return bounding boxes of detected abnormal regions in JSON format as follows:\n```json\n[\n{\"bbox_2d\": [x1, y1, x2, y2], \"label\": \"label\"},\n...\n]\n```\nIf no abnormalities are detected, return the string: \"no target.\" Ensure bounding boxes tightly overlap with the boundaries of the abnormalities and avoid including normal regions.",
+      "score": 0.12,
+      "source": "visual_momemtum",
+      "generation": 0
+    },
+    "visual_momemtum_gen_0_vf5": {
+      "text": "Analyze the medical image and return bounding boxes around any abnormal regions associated with pathological findings, such as tumors, lesions, or irregular masses, in JSON format. Follow these specific instructions:\n\n1. **What to Detect**: Abnormal regions may appear as irregular shapes, distinct textures, or areas with abnormal intensity compared to surrounding tissues. Focus on regions that deviate from normal anatomical structures.\n2. **Bounding Box Specifications**: Ensure bounding boxes tightly enclose the abnormal regions with significant overlap with the ground truth. Avoid including surrounding normal areas.\n3. **False Positive Avoidance**: Do not detect normal anatomical structures, such as symmetrical tissues or standard variations, as abnormalities.\n\nIf no abnormalities are detected, return the string: \"no target\". If abnormalities are detected, return a list of bounding boxes in the following JSON format:\n```json\n[\n{\"bbox_2d\": [x1, y1, x2, y2], \"label\": \"abnormality\"},\n...\n]\n```",
+      "score": 0.1,
+      "source": "visual_momemtum",
+      "generation": 0
+    },
+    "visual_momemtum_gen_1_vf1": {
+      "text": "Identify and return bounding boxes tightly enclosing any abnormal areas (e.g., tumors, lesions, masses, or other irregular regions) in the image. Abnormal areas are characterized by distinct visual features such as bright or dark regions, irregular shapes, or contrasting textures against surrounding tissue. \n\nIf no abnormalities are detected, return the string: \"no target\". If detected, return a list of 2D bounding boxes in the following JSON format:\n```json\n[\n  {\"bbox_2d\": [x1, y1, x2, y2], \"label\": \"label\"},\n  ...\n]\n```\nEnsure bounding boxes closely align with the abnormal regions, minimizing overlap with non-target areas.",
+      "score": 0.12,
+      "source": "visual_momemtum",
+      "generation": 1
+    },
+    "visual_momemtum_gen_1_vf2": {
+      "text": "Return bounding boxes of any abnormal areas, such as tumors, masses, or lesions, in the image as JSON format. Abnormal areas may appear as irregular shapes, white or dark masses, or regions with disrupted texture compared to surrounding tissue. Ensure precise localization by maximizing overlap with the actual abnormality regions.\n\nIf no abnormalities are present in the image, return the string: \"no target.\" If abnormalities are detected, return a list of 2D bounding boxes around the target regions in the following JSON format:\n```json\n[\n{\"bbox_2d\": [x1, y1, x2, y2], \"label\": \"label\"},\n...\n]\n```\nEnsure bounding boxes tightly enclose the abnormal areas and do not include unrelated regions.",
+      "score": 0.12,
+      "source": "visual_momemtum",
+      "generation": 1
+    },
+    "visual_momemtum_gen_1_vf3": {
+      "text": "Analyze the medical image and return bounding boxes for any abnormal areas in JSON format. If no abnormalities are present, return the string: \"no target\". If abnormalities are detected, ensure the bounding boxes tightly enclose the regions with the following attributes:\n- Tumor-like structures\n- White masses\n- Regions with irregular intensities or shapes compared to surrounding tissue\n\nOutput the bounding boxes as a JSON list in the following format:\n```json\n[\n  {\"bbox_2d\": [x1, y1, x2, y2], \"label\": \"label\"},\n  ...\n]\n```\nEnsure bounding boxes are precise and overlap closely with the abnormal areas. For cases with multiple abnormalities, provide separate bounding boxes for each region.",
+      "score": 0.07666666666666666,
+      "source": "visual_momemtum",
+      "generation": 1
+    },
+    "visual_momemtum_gen_1_vf4": {
+      "text": "Return bounding boxes of any abnormal areas (e.g., tumors, lesions, masses, or irregularities) as JSON format. Abnormal areas are characterized by distinct differences in appearance compared to surrounding tissues, such as unusual shapes, varying texture, or intensity contrasts (e.g., white masses or dark spots). If the image does not contain any abnormalities, return the string: \"no target\". \n\nIf abnormalities are detected, return a list of 2D bounding boxes precisely aligned with the target regions in the following JSON format:\n```json\n[\n  {\"bbox_2d\": [x1, y1, x2, y2], \"label\": \"label\"},\n  ...\n]\n```\nEnsure bounding boxes tightly encompass target regions and avoid unrelated areas.",
+      "score": 0.15,
+      "source": "visual_momemtum",
+      "generation": 1
+    },
+    "visual_momemtum_gen_2_vf1": {
+      "text": "Return bounding boxes of any abnormal areas (e.g., tumors, lesions, masses, or irregularities) as JSON format. Abnormal areas are characterized by distinct visual differences from surrounding normal tissues, including:\n- Unusual shapes or irregular boundaries.\n- Noticeable texture variations (e.g., rough, dense, or spongy patterns).\n- Significant intensity contrasts, such as brighter or darker spots compared to nearby tissues.\n\nBounding boxes should:\n1. Tightly align with the boundaries of abnormal areas, avoiding overlap with unrelated regions.\n2. Exclude normal anatomical structures and artifacts.\n\nIf no abnormalities are detected in the image, return the string: \"no target\". If abnormalities are detected, return a list of 2D bounding boxes in the following JSON format:\n```json\n[\n  {\"bbox_2d\": [x1, y1, x2, y2], \"label\": \"label\"},\n  ...\n]\n```\nEnsure the bounding boxes are precise and focus strictly on the abnormal regions highlighted by the described characteristics.",
+      "score": 0.13,
+      "source": "visual_momemtum",
+      "generation": 2
+    },
+    "visual_momemtum_gen_2_vf2": {
+      "text": "Return bounding boxes of any abnormal areas (e.g., tumors, lesions, or masses) as JSON format. Abnormal areas are defined by distinct visual characteristics, including:\n- **Intensity differences**: Unusually bright (hyperintense) or dark (hypointense) regions compared to surrounding tissue.\n- **Shape irregularities**: Non-standard, asymmetrical, or lobulated contours.\n- **Texture variations**: Regions with inconsistent or grainy patterns compared to normal tissue.\n\nBounding boxes must:\n1. Tightly align with the abnormal regions without including unrelated areas.\n2. Precisely encapsulate the boundaries of the detected abnormality.\n\nIf no abnormalities are present, return the string: \"no target\". If abnormalities are detected, return a list of 2D bounding boxes in the following JSON format:\n```json\n[\n  {\"bbox_2d\": [x1, y1, x2, y2], \"label\": \"label\"},\n  ...\n]\n```\nEnsure accurate detection by focusing on both the visual appearance of abnormalities and their anatomical context.",
+      "score": 0.14,
+      "source": "visual_momemtum",
+      "generation": 2
+    },
+    "visual_momemtum_gen_2_vf3": {
+      "text": "Return bounding boxes of any abnormal areas (e.g., tumors, lesions, masses, or irregularities) as JSON format. Abnormal areas are characterized by distinct differences in appearance compared to surrounding tissues, such as irregular edges, non-uniform or coarse textures, and sharp contrast differences in intensity (e.g., brighter or darker than surrounding regions). Ensure that bounding boxes tightly encompass the full extent of the abnormalities while excluding unrelated regions or normal variations.\n\nIf no abnormalities are detected, return the string: \"no target\". If abnormalities are detected, return a list of 2D bounding boxes in the following JSON format:\n```json\n[\n  {\"bbox_2d\": [x1, y1, x2, y2], \"label\": \"label\"},\n  ...\n]\n```",
+      "score": 0.1,
+      "source": "visual_momemtum",
+      "generation": 2
+    },
+    "visual_momemtum_gen_2_vf4": {
+      "text": "Return bounding boxes of any abnormal areas (e.g., tumors, lesions, masses, or irregularities) in the medical image as JSON format. Abnormal areas are defined by distinct visual differences from surrounding tissues, such as:\n- Unusual shapes (e.g., irregular, asymmetrical contours).\n- Texture changes (e.g., coarse, spongy, or uneven patterns).\n- Intensity contrasts (e.g., brighter or darker than adjacent areas).\n\nEnsure bounding boxes tightly encompass abnormal regions, avoiding unrelated or normal structures. If the image does not contain any abnormalities, return the string: \"no target\". \n\nIf abnormalities are detected, return a list of 2D bounding boxes in the following JSON format:\n```json\n[\n  {\"bbox_2d\": [x1, y1, x2, y2], \"label\": \"label\"},\n  ...\n]\n```",
+      "score": 0.13,
+      "source": "visual_momemtum",
+      "generation": 2
+    },
+    "visual_momemtum_gen_2_vf5": {
+      "text": "Return bounding boxes of any abnormal areas (e.g., tumors, lesions, masses, or irregularities) as JSON format. Abnormal areas are regions that visually differ from surrounding tissues, characterized by features such as:\n- Irregular shapes or asymmetrical structures,\n- Distinct texture variations (e.g., rough, grainy patches),\n- Intensity contrasts (e.g., bright white masses or dark spots compared to surrounding areas).\n\nEnsure bounding boxes tightly encompass only the abnormal region, avoiding unrelated areas. If no abnormalities are found in the image, return the string: \"no target\".\n\nIf abnormalities are detected, return a list of 2D bounding boxes in the JSON format:\n```json\n[\n  {\"bbox_2d\": [x1, y1, x2, y2], \"label\": \"label\"},\n  ...\n]\n```",
+      "score": 0.15,
+      "source": "visual_momemtum",
+      "generation": 2
+    }
+  }
+}
