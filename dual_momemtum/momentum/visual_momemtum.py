@@ -9,7 +9,7 @@ from datetime import datetime
 from PIL import Image, ImageDraw, ImageFont
 from openai import OpenAI
 
-VIZ_FONT_SIZE = 28
+VIZ_FONT_SIZE = 32
 VIZ_FONT_PATHS = [
     "/usr/share/fonts/truetype/dejavu/DejaVuSans-Bold.ttf",
     "/usr/share/fonts/dejavu/DejaVuSans-Bold.ttf",
