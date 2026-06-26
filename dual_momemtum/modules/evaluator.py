@@ -2,7 +2,7 @@ import json
 from collections import defaultdict
 from typing import Dict, List, Optional, Tuple
 
-from modules.evluate import calculate_map
+from modules.evluate import calculate_iou, calculate_map
 from modules.utils import get_image_size
 from modules.logger import get_logger
 
@@ -78,23 +78,29 @@ class Evaluator:
                         bbox = item['bbox_2d']
                         if isinstance(bbox, list) and len(bbox) == 4:
                             try:
-                                pred_boxes.append([float(x) for x in bbox])
+                                parsed_bbox = [float(x) for x in bbox]
                             except (ValueError, TypeError):
                                 continue
+                            if self._is_valid_box(parsed_bbox):
+                                pred_boxes.append(parsed_bbox)
                     elif isinstance(item, list) and len(item) == 4:
                         try:
-                            pred_boxes.append([float(x) for x in item])
+                            parsed_bbox = [float(x) for x in item]
                         except (ValueError, TypeError):
                             continue
+                        if self._is_valid_box(parsed_bbox):
+                            pred_boxes.append(parsed_bbox)
 
             gt_boxes = []
             if isinstance(gt_boxes_raw, list):
                 for bbox in gt_boxes_raw:
                     if isinstance(bbox, list) and len(bbox) == 4:
                         try:
-                            gt_boxes.append([float(x) for x in bbox])
+                            parsed_bbox = [float(x) for x in bbox]
                         except (ValueError, TypeError):
                             continue
+                        if self._is_valid_box(parsed_bbox):
+                            gt_boxes.append(parsed_bbox)
 
             if len(pred_boxes) == 0 and len(gt_boxes) == 0:
                 no_target_count += 1
@@ -119,6 +125,7 @@ class Evaluator:
             logger.debug(f"  pred={len(pred_boxes)}, gt={len(gt_boxes)}, mAP@0.5={score:.4f}")
 
             if score < 0.2:
+                best_iou = self._best_iou(pred_boxes, gt_boxes)
                 errors.append({
                     'sample_idx': result['sample_idx'],
                     'image_path': result['image_path'],
@@ -126,7 +133,10 @@ class Evaluator:
                     'pred_boxes': pred_boxes,
                     'gt_boxes': gt_boxes,
                     'score': score,
-                    'error_type': self._classify_error(pred_boxes, gt_boxes),
+                    'best_iou': best_iou,
+                    'pred_count': len(pred_boxes),
+                    'gt_count': len(gt_boxes),
+                    'error_type': self._classify_error(pred_boxes, gt_boxes, best_iou),
                 })
 
         batch_size = len(infer_results)
@@ -139,15 +149,52 @@ class Evaluator:
         return scores, errors
 
     @staticmethod
-    def _classify_error(pred_boxes: List, gt_boxes: List) -> str:
-        if len(pred_boxes) == 0 and len(gt_boxes) > 0:
-            return "missing_boxes"
-        elif len(pred_boxes) > 0 and len(gt_boxes) == 0:
-            return "false_positives"
-        elif len(pred_boxes) > len(gt_boxes):
-            return "too_many_boxes"
-        else:
-            return "misaligned_boxes"
+    def _is_valid_box(box: List) -> bool:
+        if len(box) != 4:
+            return False
+        x1, y1, x2, y2 = box
+        return x2 > x1 and y2 > y1
+
+    @staticmethod
+    def _best_iou(pred_boxes: List, gt_boxes: List) -> float:
+        if not pred_boxes or not gt_boxes:
+            return 0.0
+
+        best_iou = 0.0
+        for pred_box in pred_boxes:
+            for gt_box in gt_boxes:
+                try:
+                    best_iou = max(best_iou, calculate_iou(pred_box, gt_box))
+                except Exception:
+                    continue
+        return best_iou
+
+    @staticmethod
+    def _classify_error(pred_boxes: List, gt_boxes: List, best_iou: float = None) -> str:
+        pred_count = len(pred_boxes)
+        gt_count = len(gt_boxes)
+
+        if pred_count == 0 and gt_count == 0:
+            return "correct_no_target"
+        if pred_count == 0:
+            return "missed_target"
+        if gt_count == 0:
+            return "false_positive"
+
+        if best_iou is None:
+            best_iou = Evaluator._best_iou(pred_boxes, gt_boxes)
+
+        if best_iou == 0.0:
+            return "wrong_region"
+        if best_iou < 0.3:
+            return "poor_overlap"
+        if best_iou < 0.5:
+            return "near_miss"
+        if pred_count > gt_count:
+            return "over_detection"
+        if pred_count < gt_count:
+            return "under_detection"
+        return "low_confidence_or_label_error"
 
     def select_worst_cases(self, errors: List[Dict], k: int = 20) -> List[Dict]:
         if not errors:

@@ -2,7 +2,6 @@ import json
 import logging
 import base64
 import re
-import random
 from pathlib import Path
 from typing import List, Dict, Optional
 from datetime import datetime
@@ -79,10 +78,36 @@ class VisualMomemtumOptimizer:
     def _select_representative_errors(self, errors: List[Dict], k: int = 3) -> List[Dict]:
         if not errors:
             return []
-        selected = random.sample(errors, min(k, len(errors)))
-        self.logger.info(f"Selected {len(selected)} error samples (k={k}, total={len(errors)})")
+
+        errors_by_type = {}
+        for error in errors:
+            errors_by_type.setdefault(error.get('error_type', 'unknown'), []).append(error)
+
+        selected = []
+        for error_type in sorted(errors_by_type, key=lambda t: len(errors_by_type[t]), reverse=True):
+            if len(selected) >= k:
+                break
+            candidates = sorted(
+                errors_by_type[error_type],
+                key=lambda e: (e.get('score', 0.0), e.get('best_iou', 0.0))
+            )
+            selected.append(candidates[0])
+
+        if len(selected) < k:
+            selected_ids = {id(error) for error in selected}
+            remaining = [error for error in errors if id(error) not in selected_ids]
+            remaining = sorted(
+                remaining,
+                key=lambda e: (e.get('score', 0.0), e.get('best_iou', 0.0))
+            )
+            selected.extend(remaining[:k - len(selected)])
+
+        self.logger.info(f"Selected {len(selected)} error samples (k={k}, total={len(errors)}, types={len(errors_by_type)})")
         for i, err in enumerate(selected):
-            self.logger.info(f"  sample {i+1}: score={err.get('score', 0):.4f}, type={err.get('error_type', 'unknown')}")
+            self.logger.info(
+                f"  sample {i+1}: score={err.get('score', 0):.4f}, "
+                f"best_iou={err.get('best_iou', 0):.4f}, type={err.get('error_type', 'unknown')}"
+            )
         return selected
 
     def _generate_visualizations(self, errors: List[Dict], iteration) -> List[Dict]:
@@ -103,6 +128,7 @@ class VisualMomemtumOptimizer:
                 score = error.get('score', 0.0)
                 pred_boxes = error.get('pred_boxes', [])
                 gt_boxes = error.get('gt_boxes', [])
+                best_iou = error.get('best_iou', 0.0)
 
                 try:
                     pred_boxes = [[float(c) for c in box] for box in pred_boxes if isinstance(box, list)]
@@ -126,7 +152,11 @@ class VisualMomemtumOptimizer:
                         continue
 
                 try:
-                    draw.text((10, 10), f"Error: {error_type} | Score: {score:.4f}", fill='yellow')
+                    draw.text(
+                        (10, 10),
+                        f"Error: {error_type} | Score: {score:.4f} | Best IoU: {best_iou:.3f}",
+                        fill='yellow'
+                    )
                 except Exception:
                     pass
 
@@ -137,6 +167,7 @@ class VisualMomemtumOptimizer:
                     'image_path': str(viz_path),
                     'error_type': error_type,
                     'description': (f"Error Type: {error_type} | mAP@0.5: {score:.4f} | "
+                                    f"Best IoU: {best_iou:.4f} | "
                                     f"Pred Boxes: {len(pred_boxes)} | GT Boxes: {len(gt_boxes)}"),
                     'original_image': image_path,
                     'pred_boxes_count': len(pred_boxes),

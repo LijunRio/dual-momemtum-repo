@@ -38,7 +38,11 @@ def calculate_iou(bbox1: List[int], bbox2: List[int]) -> float:
 def parse_boxes_from_output(text):
     """Extract all bbox_2d and label entries from model output."""
     if not text or text.strip() == "":
-        return [{"label": "None", "bbox_2d": [0, 0, 0, 0]}]
+        return []
+
+    if text.strip().lower().strip('` \"\'') in {"no target", "none", "null"}:
+        return []
+
     results = []
 
     cleaned_text = re.sub(r'<[^>]*>', '', text)
@@ -83,7 +87,7 @@ def parse_boxes_from_output(text):
         except Exception:
             continue
 
-    return results if results else [{"label": "None", "bbox_2d": [0, 0, 0, 0]}]
+    return results
 
 
 def parse_ground_truth(label_str: str) -> List[List[int]]:
