@@ -1,9 +1,0 @@
-Return bounding boxes of any abnormal areas, such as tumors, lesions, or masses, as JSON format. Abnormal areas may appear as irregularly shaped bright or dark regions, or areas with a distinct texture or intensity compared to surrounding tissue. Ensure the bounding boxes tightly encompass the abnormalities.
-
-If the image does not contain the target, return the string: "no target." If detected, return a list of 2D bounding boxes around the target regions in the following JSON format:
-```json
-[
-  {"bbox_2d": [x1, y1, x2, y2], "label": "label"},
-  ...
-]
-```
