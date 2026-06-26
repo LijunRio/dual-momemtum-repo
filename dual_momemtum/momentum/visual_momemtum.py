@@ -9,7 +9,7 @@ from datetime import datetime
 from PIL import Image, ImageDraw, ImageFont
 from openai import OpenAI
 
-VIZ_FONT_SIZE = 22
+VIZ_FONT_SIZE = 28
 VIZ_FONT_PATHS = [
     "/usr/share/fonts/truetype/dejavu/DejaVuSans-Bold.ttf",
     "/usr/share/fonts/dejavu/DejaVuSans-Bold.ttf",
@@ -168,11 +168,6 @@ class VisualMomemtumOptimizer:
 
                 try:
                     text = f"Error: {error_type} | Score: {score:.4f} | Best IoU: {best_iou:.3f}"
-                    text_bbox = draw.textbbox((10, 10), text, font=VIZ_FONT)
-                    draw.rectangle(
-                        [text_bbox[0] - 4, text_bbox[1] - 3, text_bbox[2] + 4, text_bbox[3] + 3],
-                        fill=(0, 0, 0)
-                    )
                     draw.text((10, 10), text, fill='yellow', font=VIZ_FONT)
                 except Exception:
                     pass
