@@ -1,7 +1,0 @@
-{"iteration": 1, "retry": 0, "timestamp": "20260626_085648", "input": {"model": "openai/gpt-4o-2024-11-20", "temperature": 0.7, "max_tokens": 2048, "top_p": 0.9}, "response": {"status_code": 401}}
-{"iteration": 1, "retry": 1, "timestamp": "20260626_085653", "input": {"model": "openai/gpt-4o-2024-11-20", "temperature": 0.7, "max_tokens": 2048, "top_p": 0.9}, "response": {"status_code": 401}}
-{"iteration": 1, "retry": 2, "timestamp": "20260626_085658", "input": {"model": "openai/gpt-4o-2024-11-20", "temperature": 0.7, "max_tokens": 2048, "top_p": 0.9}, "response": {"status_code": 401}}
-{"iteration": 2, "retry": 0, "timestamp": "20260626_085658", "input": {"model": "openai/gpt-4o-2024-11-20", "temperature": 0.7, "max_tokens": 2048, "top_p": 0.9}, "response": {"status_code": 401}}
-{"iteration": 2, "retry": 1, "timestamp": "20260626_085703", "input": {"model": "openai/gpt-4o-2024-11-20", "temperature": 0.7, "max_tokens": 2048, "top_p": 0.9}, "response": {"status_code": 401}}
-{"iteration": 2, "retry": 2, "timestamp": "20260626_085708", "input": {"model": "openai/gpt-4o-2024-11-20", "temperature": 0.7, "max_tokens": 2048, "top_p": 0.9}, "response": {"status_code": 401}}
-{"iteration": 3, "retry": 0, "timestamp": "20260626_085709", "input": {"model": "openai/gpt-4o-2024-11-20", "temperature": 0.7, "max_tokens": 2048, "top_p": 0.9}, "response": {"status_code": 401}}
