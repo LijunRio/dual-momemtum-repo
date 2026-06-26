@@ -6,9 +6,24 @@ from pathlib import Path
 from typing import List, Dict, Optional
 from datetime import datetime
 
-from PIL import Image, ImageDraw
+from PIL import Image, ImageDraw, ImageFont
 from openai import OpenAI
 
+VIZ_FONT_SIZE = 22
+VIZ_FONT_PATHS = [
+    "/usr/share/fonts/truetype/dejavu/DejaVuSans-Bold.ttf",
+    "/usr/share/fonts/dejavu/DejaVuSans-Bold.ttf",
+]
+
+
+def _load_viz_font():
+    for font_path in VIZ_FONT_PATHS:
+        if Path(font_path).exists():
+            return ImageFont.truetype(font_path, VIZ_FONT_SIZE)
+    return ImageFont.load_default()
+
+
+VIZ_FONT = _load_viz_font()
 
 class VisualMomemtumOptimizer:
     """Visual momentum optimizer: improves prompts by analyzing visual error cases."""
@@ -152,11 +167,13 @@ class VisualMomemtumOptimizer:
                         continue
 
                 try:
-                    draw.text(
-                        (10, 10),
-                        f"Error: {error_type} | Score: {score:.4f} | Best IoU: {best_iou:.3f}",
-                        fill='yellow'
+                    text = f"Error: {error_type} | Score: {score:.4f} | Best IoU: {best_iou:.3f}"
+                    text_bbox = draw.textbbox((10, 10), text, font=VIZ_FONT)
+                    draw.rectangle(
+                        [text_bbox[0] - 4, text_bbox[1] - 3, text_bbox[2] + 4, text_bbox[3] + 3],
+                        fill=(0, 0, 0)
                     )
+                    draw.text((10, 10), text, fill='yellow', font=VIZ_FONT)
                 except Exception:
                     pass
 
