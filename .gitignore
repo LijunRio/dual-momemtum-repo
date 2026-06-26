@@ -2,4 +2,5 @@
 **/*.pyc
 **/*.pyo
 0paper/
+samples/
 dual_momemtum/job_mcml.sbatch

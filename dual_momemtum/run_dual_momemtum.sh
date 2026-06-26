@@ -10,7 +10,7 @@ ITERATIONS=20
 
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 DATA_DIR="${SCRIPT_DIR}/../data"
-API_KEY="You-API-Key"
+API_KEY="${OPENROUTER_API_KEY:-}"
 
 TRAIN_DATA_PATH="${DATA_DIR}/dev_nova_100.json"
 DEV_DATA_PATH="${DATA_DIR}/dev_nova_100.json"
