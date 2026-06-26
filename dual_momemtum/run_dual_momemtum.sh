@@ -30,8 +30,8 @@ IMAGE_PATH_TO="/home/june/datasets/nova"
 
 BASE_OUTPUT_DIR="./output"
 declare -a MODEL_PATHS=(
-    "/home/june/cache/huggingface_checkpoints/Qwen2.5-VL-3B-Instruct"
-    # "/home/june/cache/huggingface_checkpoints/Qwen2.5-VL-7B-Instruct"
+    # "/home/june/cache/huggingface_checkpoints/Qwen2.5-VL-3B-Instruct"
+    "/home/june/cache/huggingface_checkpoints/Qwen2.5-VL-7B-Instruct"
     # "/home/june/cache/huggingface_checkpoints/Qwen2.5-VL-32B-Instruct"
     # "/home/june/cache/huggingface_checkpoints/Qwen2.5-VL-72B-Instruct"
 )
